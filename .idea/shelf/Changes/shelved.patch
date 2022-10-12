@@ -1,0 +1,937 @@
+Index: out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/Punct_3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Punct_3.java b/src/Punct_3.java
+new file mode 100644
+--- /dev/null	(date 1663454836374)
++++ b/src/Punct_3.java	(date 1663454836374)
+@@ -0,0 +1,16 @@
++public class Punct_3 {
++        public static void main(String[] args) {
++            System.out.println("Tiparim rezultate");
++
++        // eliminam cuvantul PUBLIC de la inceput de fraza si inlocuim VOID cu INT
++
++        int X1;
++        X1=12;
++
++        System.out.println(A (X1));
++        }
++        static int A(int numar) {
++            int A = numar * numar;
++            return A;
++        }
++}
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1665611006053)
++++ b/.idea/compiler.xml	(date 1665611006053)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="QA_Automat_T1" options="--add-exports java.base/java=ALL-UNNAMED" />
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/misc.xml b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/.gitignore b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: src/Cum_calculam.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Cum_calculam.java b/src/Cum_calculam.java
+new file mode 100644
+--- /dev/null	(date 1663543668975)
++++ b/src/Cum_calculam.java	(date 1663543668975)
+@@ -0,0 +1,59 @@
++import java.util.Scanner;
++public class Cum_calculam {
++    public static void main(String[] args) {
++    System.out.println("introducem numarul fractionar_1");
++
++    Scanner scanner = new Scanner(System.in);
++    double numarul1 = scanner.nextDouble();
++
++    System.out.println("introducem numarul fractionar_2:");
++    double numarul2 = scanner.nextDouble();
++
++    double rez_inmultim = inmultim(numarul1, numarul2);
++    double rez_adunam = adunam( numarul1, numarul2);
++    double rez_scadem = scadem(numarul1, numarul2);
++    double rez_impartim = impartim( numarul1, numarul2);
++    double rez_modul = modul( (int)numarul1, (int)numarul2);
++
++    double random = generam_nr_aleatoriu(rez_scadem, rez_inmultim );
++
++    System.out.println("rez_inmultire = " + rez_inmultim );
++    System.out.println("rez_adunare = " + rez_adunam );
++    System.out.println("rez_scadere = " + rez_scadem );
++    System.out.println("rez_impartire = " + rez_impartim );
++    System.out.println("rez_modul = " + rez_modul );
++    System.out.println("rez_nr_aleatoriu intre " + rez_scadem + " si " + rez_inmultim + " este = " + random );
++
++    }                                       // aici se termina sectiunea main, deci de aici incepem sa inseram valorile
++
++    public static double inmultim( double nr1, double nr2) {
++        double rez = nr1 * nr2;
++        return rez;
++    }   // valoarea returnata de "double" este de tipul primitiva
++
++    public static Double adunam( double numarul1, double nr2) {
++        double rez = numarul1 + nr2;
++        return rez;
++    }
++
++    public static Double scadem( Double numarul1, Double numarul2) {
++        double rez = numarul1 - numarul2;
++        return rez;
++    }   // valoarea returnata de "Double" este de tipul non-primitiva
++
++    public static Double impartim( Double numarul1, double numarul2) {
++        return numarul1 / numarul2;
++    }   // returnarea valorii se poate face direct cerand "return numar1 / numar2" fara a utiliza variabila "rez"
++
++    public static int modul( int nr1, int nr2) {
++        return nr1 % nr2 ;
++    }
++// generarea unui numar RANDOM
++
++    public static double generam_nr_aleatoriu(double minim, double maxim ){
++        return Math.random()*(maxim-minim) + minim;
++// random generaza un numar intre 0 si 1. Atunci alegem noi intervalul dorit si-l definim - "min <=> max".
++    }
++
++
++}
+Index: out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/modules.xml b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/out/production/QA_Automat_T1/out/production/QA_Automat_Tema_1/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/EXER_acasa.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/EXER_acasa.java b/src/EXER_acasa.java
+new file mode 100644
+--- /dev/null	(date 1663694562303)
++++ b/src/EXER_acasa.java	(date 1663694562303)
+@@ -0,0 +1,48 @@
++// import java.sql.SQLOutput;
++import java.sql.SQLOutput;
++import java.util.Scanner;
++
++public class EXER_acasa {
++    // aici aplicam functia static void main() -> de aici rulam codul
++    // definim variabile in "main"
++    // definim functii/metode in AFARA functiei "main"
++    // apelam funcvtiile definite in cadrul fucntieie "main"
++
++    public static void main(String[] arg){
++        int x;
++        int y;
++        int z;
++        int w;
++        Scanner Suma2numere = new Scanner(System.in);
++            System.out.println( "Introducem valoarea 1 = " );
++        x = Suma2numere.nextInt();
++        Suma2numere.nextLine();
++        System.out.println( " Introducem valoarea 2 = " );
++        y = Suma2numere.nextInt();
++        Suma2numere.nextLine();
++              System.out.println( "X = " + x + ";  Y = " +y );
++        int suma = Suma2numere( x,y );
++               System.out.println("Suma = " + suma);
++
++//        Scanner Inmultirea2numere = new Scanner (System.in);
++//        z = Inmultirea2numere.nextInt();
++//        Inmultirea2numere.nextLine();
++//        w = Inmultirea2numere.nextInt();
++//        Inmultirea2numere.nextLine();
++//            System.out.println( "X = " + x + " Y = " +y );
++//        int inmultirea = Inmultirea2numere( z,w );
++
++
++               //  System.out.println("inmultirea = " + inmultirea(x,y)); // aplicam metoda asta
++        } // aici avem functia "main"
++
++
++        // Aici am definit functiile, in afara blocului de void main
++        static int Suma2numere(int n1, int n2){
++        return n1 + n2;
++        }
++        static int inmultirea( int n1, int n2){
++        return n1*n2;
++        }
++
++}
+\ No newline at end of file
+Index: src/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/QA_Automat_Tema_1.iml b/src/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/src/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml b/src/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/src/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/out/production/QA_Automat_Tema_1/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/out/production/QA_Automat_Tema_1/.idea/.gitignore b/src/out/production/QA_Automat_Tema_1/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/src/out/production/QA_Automat_Tema_1/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: src/out/production/QA_Automat_Tema_1/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/out/production/QA_Automat_Tema_1/.idea/misc.xml b/src/out/production/QA_Automat_Tema_1/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/src/out/production/QA_Automat_Tema_1/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/out/production/QA_Automat_Tema_1/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/out/production/QA_Automat_Tema_1/.idea/modules.xml b/src/out/production/QA_Automat_Tema_1/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/src/out/production/QA_Automat_Tema_1/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_Tema_1/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/.idea/.gitignore b/out/production/QA_Automat_Tema_1/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/out/production/QA_Automat_Tema_1/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: out/production/QA_Automat_Tema_1/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/.idea/misc.xml b/out/production/QA_Automat_Tema_1/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/out/production/QA_Automat_Tema_1/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml b/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: out/production/QA_Automat_Tema_1/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/.idea/modules.xml b/out/production/QA_Automat_Tema_1/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/out/production/QA_Automat_Tema_1/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/.idea/misc.xml b/src/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/src/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/.idea/modules.xml b/src/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/src/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/.idea/.gitignore b/src/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/src/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/.gitignore b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/misc.xml b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/modules.xml b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/out/production/QA_Automat_Tema_1/out/production/QA_Automat_Tema_1/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1665611295701)
++++ b/.idea/vcs.xml	(date 1665611295701)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: QA_Automat_T1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/QA_Automat_T1.iml b/QA_Automat_T1.iml
+new file mode 100644
+--- /dev/null	(date 1665611006032)
++++ b/QA_Automat_T1.iml	(date 1665611006032)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: out/production/QA_Automat_T1/QA_Automat_Tema_1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/QA_Automat_Tema_1.iml b/out/production/QA_Automat_T1/QA_Automat_Tema_1.iml
+new file mode 100644
+--- /dev/null	(date 1664221918955)
++++ b/out/production/QA_Automat_T1/QA_Automat_Tema_1.iml	(date 1664221918955)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+--- /dev/null	(date 1665436759639)
++++ b/src/Main.java	(date 1665436759639)
+@@ -0,0 +1,6 @@
++public class Main {
++
++    public static void main(String[] args) {
++        System.out.println("");
++    }
++}
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1665611006042)
++++ b/.idea/modules.xml	(date 1665611006042)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_T1.iml" filepath="$PROJECT_DIR$/QA_Automat_T1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1663354201437)
++++ b/.idea/misc.xml	(date 1663354201437)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/Punct_1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Punct_1.java b/src/Punct_1.java
+new file mode 100644
+--- /dev/null	(date 1663454836388)
++++ b/src/Punct_1.java	(date 1663454836388)
+@@ -0,0 +1,23 @@
++
++public class Punct_1 {
++    public static void main(String[] args) {
++        // aici o sa scriem prima tema
++        System.out.println("Prima linie cod/text ... !");
++        System.out.println("Inca o linie cod/text ... !");
++
++        // acum o sa facem operatiuni matematice de ...
++        System.out.println(6 + 3); // adunare
++        System.out.println(6 - 3); // scadere
++        System.out.println(6 * 3); // inmultire
++        System.out.println(6 / 3); // impartire
++        System.out.println(6 % 3); // modul - rest impartirii
++
++        // aceste beste un COMMENT, el nu este interpretat de Java
++        /* Acest Comment care
++        se scrie pe mai multe
++        randuri se foloseste
++         */
++
++    }
++}
++
+Index: out/production/QA_Automat_T1/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/.idea/.gitignore b/out/production/QA_Automat_T1/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664116993930)
++++ b/out/production/QA_Automat_T1/.idea/.gitignore	(date 1664116993930)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1663354207602)
++++ b/.idea/.gitignore	(date 1663354207602)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: out/production/QA_Automat_T1/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/.idea/modules.xml b/out/production/QA_Automat_T1/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1664116993866)
++++ b/out/production/QA_Automat_T1/.idea/modules.xml	(date 1664116993866)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/QA_Automat_Tema_1.iml" filepath="$PROJECT_DIR$/QA_Automat_Tema_1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/QA_Automat_T1/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/QA_Automat_T1/.idea/misc.xml b/out/production/QA_Automat_T1/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664116993877)
++++ b/out/production/QA_Automat_T1/.idea/misc.xml	(date 1664116993877)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/Tema_curs1_P5_P6_P7_P8.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Tema_curs1_P5_P6_P7_P8.java b/src/Tema_curs1_P5_P6_P7_P8.java
+new file mode 100644
+--- /dev/null	(date 1665436650370)
++++ b/src/Tema_curs1_P5_P6_P7_P8.java	(date 1665436650370)
+@@ -0,0 +1,88 @@
++import javax.net.ssl.X509TrustManager;
++import java.util.Scanner;
++public class Tema_curs1_P5_P6_P7_P8 {
++    public static void main(String[] args) {
++
++//    exe5();
++//    exe6();
++//    exe7();
++//    exe8();
++    }
++
++/*  Exercitiul 5
++    Se definesc 3 variabile in metoda myVariables, 1 int, 1 String, 1 boolean si apelati metoda "main"
++    myVariables sunt definite mai jos ca fiind a, b si c */
++    static void exe5() {
++        System.out.println("Punctul 5 - afisam 3 marimi diferite");
++        int a;
++        String b;
++        boolean c;
++        a = 10;
++        b = "Cal si caruta";
++        c = true;
++        System.out.println(a);
++        System.out.println(b);
++        System.out.println(c);
++        System.out.println(" ");
++    }
++
++/*  Exercitiul 6
++    Folosim o metoda prin care cream 2 variabile, le introducere de la tastatura, le stocam in memorie
++    si dupa citire o sa le afisam pe ecran */
++    static void exe6() {
++        System.out.println("Punctul 6 - Introducti valoarile Nr.1 & Nr.2 de la tastatura");
++        Scanner numar1 = new Scanner(System.in);
++        double nr1 = numar1.nextDouble();
++        System.out.println("Am introdus primul numar");
++
++        Scanner numar2 = new Scanner(System.in);
++        double nr2 = numar2.nextDouble();
++        System.out.println("Am introdus al doilea numar");
++
++        System.out.println("Primul numar este =  " + nr1);
++        System.out.println("Al doilea numar este =  " + nr2);
++        System.out.println(" ");
++    }
++
++ /*  Exercitiul 7
++    Citim de la tastatura un numar si apoi facem operatiile urmatoare:
++    - adunam cu 5 ; scadem 12,3 ; inmultim cu -3,2 ; impatim la 4 ; extragem modulul cu 6
++    si afisam toate raspunsurile  */
++    static void exe7() {
++        System.out.println("Punctul 7 - Introducti valoarea lui A de la tastatura");
++        Scanner A = new Scanner(System.in);
++        int A1 = A.nextInt();
++        System.out.println("Am introdus numar A");
++
++        int X1;
++        X1 = A1 + 5;
++        System.out.println("Rezulatatul este =  " + X1);
++        double X2;
++        X2 = A1 - 12.3;
++        System.out.println("Rezulatatul este =  " + X2);
++        double X3;
++        X3 = A1 * (-3.2);
++        System.out.println("Rezulatatul este =  " + X3);
++        double X4;
++        X4 = A1 / 4;
++        System.out.println("Rezulatatul este =  " + X4);
++        int X5;
++        X5 = A1 % 6;
++        System.out.println("Rezulatatul este =  " + X5);
++        System.out.println(" ");
++    }
++
++/*  Exercfitiul 8
++ce se elimina ca sa avem rezultat 12 si 2 */
++    static void exe8() {
++        System.out.println("Punctul 8 - Stergeti un comment ca sa avem 12 si 2 rezultate finale");
++        int x = 2;
++        int y = 12;
++        // y = x * y;
++        y = x + y;
++        x = y - x;
++        y = y - x;
++        System.out.println(x);
++        System.out.println(y);
++    }
++}
+\ No newline at end of file
+Index: src/Punct_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Punct_2.java b/src/Punct_2.java
+new file mode 100644
+--- /dev/null	(date 1663518598403)
++++ b/src/Punct_2.java	(date 1663518598403)
+@@ -0,0 +1,32 @@
++public class Punct_2 {
++    public static void main(String[] args) {
++    /* Primitive
++    int - stocheaza valori intregi
++    double - stocheaza numere fractionare
++    char - stocheaza caractere 'z', 'a'
++    boolean - true, false
++     */
++     /* Tipuri neprimitive
++     Student student;
++      */
++
++        int x;
++        double y;
++        char z;
++        boolean w;
++
++        x=7;
++        System.out.println(x);
++        y = 3.14;
++        System.out.println(y);
++        z= 'T';
++        System.out.println(z);
++        w = true;
++        System.out.println(w);
++
++        // tiparim de 6 ori acelasi raspuns
++        for(int i=0;i<6;i++)
++        System.out.println(z + " de 6 ori");
++
++}
++}
+Index: src/Tema_curs1_P1_P2_P3_P4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Tema_curs1_P1_P2_P3_P4.java b/src/Tema_curs1_P1_P2_P3_P4.java
+new file mode 100644
+--- /dev/null	(date 1665436569593)
++++ b/src/Tema_curs1_P1_P2_P3_P4.java	(date 1665436569593)
+@@ -0,0 +1,49 @@
++import java.util.Scanner;
++public class Tema_curs1_P1_P2_P3_P4 {
++    public static void main(String[] args) {
++//       exe1();
++//        exe2();
++//        exe3();
++//        exe4();
++    }
++
++// Exercitiul 1 - Scriem o fraza care afiseaza textul "De 3 ori TRAIASCA si la final URA!"
++    static void exe1(){
++            System.out.println("Punctul 1 - tipariti textul");
++            System.out.println("De 3 ori TRAIASCA si la final URA! , \n");
++        }
++
++// Exercitiul 2 - Scriem un program care afiseaza de 7 ori "Java e fain!"
++    static void exe2() {
++        System.out.println("Punctul 2 - tipariti textul de 7 ori");
++        for (int i = 0; i < 7; i++)
++            System.out.println("Java e fain!" + " tiparit de 7 ori");
++            System.out.println(" ");
++            }
++
++/*  Exercitiul 3
++    Scrie un program care afiseaza varsta lui David. Sora lui David, Ana, are 24 ani iar el este cu
++     6 ani mai mic ca ea */
++    static void exe3(){
++        System.out.println("Punctul 3 - Calculeaza varsta lui David");
++        int Varsta_Ana;
++        int David;
++        int Dif_ani = 6; // diferenta de varsta se poate modifica oricand
++
++        Varsta_Ana = 24; // valoarea se poate schimba oricand
++        System.out.println("Ana are " + Varsta_Ana + " ani.");
++        David = Varsta_Ana - Dif_ani;
++        System.out.println("David are " + David + " ani!  \n");
++        }
++
++/*  Exercitiul 4
++    Scrieti o fraza care citeste o propozitie de la tastatura - o sa folosim comanda Scanner si nextLine() */
++    static void exe4() {
++        System.out.println("Punctul 4 - Citim textul introdus de la tastatura");
++        String a;
++        Scanner introducere = new Scanner(System.in);
++        a = introducere.nextLine();
++        System.out.println("Citim textul de la tastatura =  " + a);
++    }
++
++}
